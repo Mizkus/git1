@@ -26,6 +26,7 @@ class _DesktopState extends State<Desktop> {
   Widget works = Text('Works');
   Widget contact = Text('Contacts');
   Widget x = Text('Student of grammar school number one');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,18 +44,30 @@ class _DesktopState extends State<Desktop> {
                         child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    FlatButton(child: Text('About me'), onPressed:(){ 
-                      setState(() {
-                        x = about;
-                      });},),
-                    FlatButton(child: Text('Work'), onPressed:(){ 
-                      setState(() {
-                       x = works;
-                      });},),
-                    FlatButton(child: Text('Contact'), onPressed:(){ 
-                       setState(() {
-                       x = contact;
-                      });},), 
+                    FlatButton(
+                      child: Text('About me'),
+                      onPressed: () {
+                        setState(() {
+                          x = about;
+                        });
+                      },
+                    ),
+                    FlatButton(
+                      child: Text('Work'),
+                      onPressed: () {
+                        setState(() {
+                          x = works;
+                        });
+                      },
+                    ),
+                    FlatButton(
+                      child: Text('Contact'),
+                      onPressed: () {
+                        setState(() {
+                          x = contact;
+                        });
+                      },
+                    ),
                   ],
                 )))
               ],
@@ -143,18 +156,30 @@ class _MobileState extends State<Mobile> {
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  FlatButton(child: Text('About me'), onPressed:(){ 
+                  FlatButton(
+                    child: Text('About me'),
+                    onPressed: () {
                       setState(() {
                         x = about;
-                      });},),
-                    FlatButton(child: Text('Work'), onPressed:(){ 
+                      });
+                    },
+                  ),
+                  FlatButton(
+                    child: Text('Work'),
+                    onPressed: () {
                       setState(() {
-                       x = works;
-                      });},),
-                    FlatButton(child: Text('Contact'), onPressed:(){ 
-                       setState(() {
-                       x = contact;
-                      });},), 
+                        x = works;
+                      });
+                    },
+                  ),
+                  FlatButton(
+                    child: Text('Contact'),
+                    onPressed: () {
+                      setState(() {
+                        x = contact;
+                      });
+                    },
+                  ),
                 ],
               ))),
           Expanded(
