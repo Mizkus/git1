@@ -16,7 +16,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Desktop extends StatelessWidget {
+class Desktop extends StatefulWidget {
+  @override
+  _DesktopState createState() => _DesktopState();
+}
+
+class _DesktopState extends State<Desktop> {
+  Widget about = Text('Student of grammar school number one');
+  Widget works = Text('Works');
+  Widget contact = Text('Contacts');
+  Widget x = Text('Student of grammar school number one');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,9 +43,18 @@ class Desktop extends StatelessWidget {
                         child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Text('About me'),
-                    Text('Work'),
-                    Text('Contact')
+                    FlatButton(child: Text('About me'), onPressed:(){ 
+                      setState(() {
+                        x = about;
+                      });},),
+                    FlatButton(child: Text('Work'), onPressed:(){ 
+                      setState(() {
+                       x = works;
+                      });},),
+                    FlatButton(child: Text('Contact'), onPressed:(){ 
+                       setState(() {
+                       x = contact;
+                      });},), 
                   ],
                 )))
               ],
@@ -68,7 +86,7 @@ class Desktop extends StatelessWidget {
                         child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    Text('Student of grammar school number one')
+                    x,
                   ],
                 )))
               ],
@@ -78,7 +96,16 @@ class Desktop extends StatelessWidget {
   }
 }
 
-class Mobile extends StatelessWidget {
+class Mobile extends StatefulWidget {
+  @override
+  _MobileState createState() => _MobileState();
+}
+
+class _MobileState extends State<Mobile> {
+  Widget about = Text('Student of grammar school number one');
+  Widget works = Text('Works');
+  Widget contact = Text('Contacts');
+  Widget x = Text('Student of grammar school number one');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,9 +143,18 @@ class Mobile extends StatelessWidget {
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Text('About me'),
-                  Text('Work'),
-                  Text('Contact')
+                  FlatButton(child: Text('About me'), onPressed:(){ 
+                      setState(() {
+                        x = about;
+                      });},),
+                    FlatButton(child: Text('Work'), onPressed:(){ 
+                      setState(() {
+                       x = works;
+                      });},),
+                    FlatButton(child: Text('Contact'), onPressed:(){ 
+                       setState(() {
+                       x = contact;
+                      });},), 
                 ],
               ))),
           Expanded(
@@ -127,7 +163,7 @@ class Mobile extends StatelessWidget {
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Text('Student of grammar school number one')
+                  x,
                 ],
               )))
         ],
